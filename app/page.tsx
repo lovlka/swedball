@@ -33,7 +33,7 @@ export default function Home() {
           </Card>
         </Box>
         <Section>
-          <Flex gap="3">
+          <Flex gap="5" wrap="wrap">
             <Alert />
             <Dialog />
             <ThemeToggle />
