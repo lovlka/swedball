@@ -7,7 +7,7 @@ import SubmitButton from "./submit-button";
 
 export default function Form() {
   const [userId, setUserId] = useState<number>(1);
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<object | null>(null);
 
   const handleSubmit = async () => {
     const user = await fetchUser(userId);
