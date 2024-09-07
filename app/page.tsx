@@ -2,6 +2,7 @@ import { Text, Flex, Box, Card, Avatar, Container, Section } from "@radix-ui/the
 import Image from "next/image";
 import Dialog from "./components/dialog";
 import Alert from "./components/alert";
+import ThemeToggle from "./components/theme-toggle";
 
 export default function Home() {
   return (
@@ -33,7 +34,8 @@ export default function Home() {
         <Section>
           <Flex gap="3">
             <Alert />
-            <Dialog />  
+            <Dialog />
+            <ThemeToggle />
           </Flex>
         </Section>
       </Container>

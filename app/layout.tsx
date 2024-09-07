@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Theme } from '@radix-ui/themes';
 import localFont from "next/font/local";
 import '@radix-ui/themes/styles.css';
@@ -28,9 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Theme appearance="dark">
-          {children}
-        </Theme>
+        <ThemeProvider attribute="class">
+          <Theme>
+            {children}
+          </Theme>
+        </ThemeProvider>
       </body>
     </html>
   );
