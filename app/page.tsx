@@ -1,9 +1,15 @@
 import { Text, Flex, Box, Card, Avatar, Container, Section } from "@radix-ui/themes";
+import Image from "next/image";
+import Dialog from "./components/dialog";
+import Alert from "./components/alert";
 
 export default function Home() {
   return (
     <Section>
       <Container>
+        <Flex justify="center" align="center">
+          <Image src="/logo.png" alt="Swedball" width={100} height={150} />
+        </Flex>
         <Box maxWidth="240px">
           <Card>
             <Flex gap="3" align="center">
@@ -24,6 +30,12 @@ export default function Home() {
             </Flex>
           </Card>
         </Box>
+        <Section>
+          <Flex gap="3">
+            <Alert />
+            <Dialog />  
+          </Flex>
+        </Section>
       </Container>
     </Section>
   );
