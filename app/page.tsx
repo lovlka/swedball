@@ -3,6 +3,7 @@ import Image from "next/image";
 import Dialog from "./components/dialog";
 import Alert from "./components/alert";
 import ThemeToggle from "./components/theme-toggle";
+import Form from "./components/form";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
             <Alert />
             <Dialog />
             <ThemeToggle />
+            <Form />
           </Flex>
         </Section>
       </Container>
