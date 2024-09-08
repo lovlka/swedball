@@ -6,3 +6,8 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+pre {
+  margin: 0;
+  font-size: small;
+}
