@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "next-themes";
 import { Theme } from '@radix-ui/themes';
+
+import './styles/reset.css';
 import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
@@ -22,7 +24,7 @@ export default function RootLayout({
     <html>
       <body>
         <ThemeProvider attribute="class">
-          <Theme>
+          <Theme appearance="dark" accentColor="orange" grayColor="olive" radius="large">
             {children}
           </Theme>
         </ThemeProvider>
