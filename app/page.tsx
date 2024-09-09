@@ -1,20 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
 import { Flex, Container, Section, Card, Box } from '@radix-ui/themes';
-import { fetchUser } from './actions/dummy-api';
 import SearchForm from './components/search-form';
 import SearchResult from './components/search-result';
 
 export default function Home() {
-  const [result, setResult] = useState<object | null>(null);
-
-  const handleSubmit = async () => {
-    const res = await fetchUser(1);
-    setResult(res);
-  };
-
   return (
     <Section>
       <Container>
@@ -25,8 +16,8 @@ export default function Home() {
                 <Flex justify="center">
                   <Image src="/logo.png" alt="Swedball" height={100} width={65} />
                 </Flex>
-                <SearchForm onSubmit={handleSubmit} />
-                <SearchResult result={result} />
+                <SearchForm />
+                <SearchResult />
               </Flex>
             </Card>
           </Box>

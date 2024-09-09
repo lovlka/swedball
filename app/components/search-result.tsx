@@ -1,11 +1,10 @@
 import { Card } from '@radix-ui/themes';
+import { useAppSelector } from '@/state/hooks';
 
-type Props = {
-  result: object | null;
-};
+export default function SearchResult() {
+  const result = useAppSelector((state) => state.search.result);
 
-export default function SearchResult({ result }: Props) {
-  return (
+  return result && (
     <Card>
       <pre>
         {JSON.stringify(result, null, 2)}
