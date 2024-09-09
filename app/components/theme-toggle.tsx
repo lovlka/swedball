@@ -9,7 +9,8 @@ export default function ThemeToggle() {
   const toggleMode = () => setTheme(theme == 'light' ? 'dark' : 'light');
 
   const defaultChecked = useMemo(() => {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    return window?.matchMedia
+      && window.matchMedia('(prefers-color-scheme: dark)').matches
       && (theme == 'dark' || theme == 'system');
   }, [theme]);
 
