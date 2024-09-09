@@ -10,7 +10,7 @@ export default function Home() {
     <Section>
       <Container>
         <Flex justify="center">
-          <Box width="500px">
+          <Box width="500px" px="3">
             <Card size="4">
               <Flex direction="column" gap="6">
                 <Flex justify="center">

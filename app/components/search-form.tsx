@@ -3,15 +3,16 @@
 import { Box, Flex, TextField } from '@radix-ui/themes';
 import { useAppDispatch } from '@/state/hooks';
 import { setResult } from '@/state/slices/search';
-import { fetchUser } from '../actions/dummy-api';
+import { searchCompanies } from '../actions/tic-api';
 import SubmitButton from './submit-button';
 import { MagnifyingGlass } from './icons';
 
 export default function SearchForm() {
   const dispatch = useAppDispatch();
 
-  const handleSubmit = async () => {
-    const res = await fetchUser(1);
+  const handleSubmit = async (values: FormData) => {
+    const search = values.get('search') as string;
+    const res = await searchCompanies(search);
     dispatch(setResult(res));
   };
 
@@ -19,7 +20,7 @@ export default function SearchForm() {
     <form action={handleSubmit}>
       <Flex gap="4">
         <Box flexGrow="1">
-          <TextField.Root placeholder="Org.nummer eller namn...">
+          <TextField.Root name="search" placeholder="Org.nummer eller namn...">
             <TextField.Slot>
               <MagnifyingGlass />
             </TextField.Slot>
