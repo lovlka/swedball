@@ -3,8 +3,10 @@ import { type PropsWithChildren } from 'react';
 import { ThemeProvider } from 'next-themes';
 import { Theme } from '@radix-ui/themes';
 import StoreProvider from '@/state/store-provider';
+import Header from './header';
+import Footer from './footer';
 
-import './styles/reset.css';
+import './styles/layout.css';
 import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
@@ -22,9 +24,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html>
       <body>
         <ThemeProvider attribute="class">
-          <Theme appearance="dark" accentColor="orange" grayColor="olive" radius="large">
+          <Theme accentColor="orange" grayColor="olive" radius="large">
             <StoreProvider>
-              {children}
+              <Header />
+              <main>
+                {children}
+              </main>
+              <Footer />
             </StoreProvider>
           </Theme>
         </ThemeProvider>

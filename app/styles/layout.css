@@ -11,3 +11,7 @@ pre {
   margin: 0;
   font-size: small;
 }
+
+header {
+  border-bottom: 1px solid var(--gray-a4);
+}
