@@ -14,5 +14,5 @@ header {
 }
 
 .radix-themes {
-  background-image: radial-gradient(at top, var(--accent-3), var(--accent-1));
+  background-image: radial-gradient(at top, var(--accent-1), var(--accent-3));
 }

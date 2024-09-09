@@ -24,7 +24,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html>
       <body>
         <ThemeProvider attribute="class">
-          <Theme accentColor="orange" grayColor="olive" radius="large">
+          <Theme accentColor="cyan" grayColor="gray" radius="large">
             <StoreProvider>
               <Header />
               <main>
