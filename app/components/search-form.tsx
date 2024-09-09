@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Box, Flex, TextField } from "@radix-ui/themes";
-import SubmitButton from "./submit-button";
-import { MagnifyingGlass } from "./icons";
+import { Box, Flex, TextField } from '@radix-ui/themes';
+import SubmitButton from './submit-button';
+import { MagnifyingGlass } from './icons';
 
 type Props = {
   onSubmit: (data: FormData) => void;

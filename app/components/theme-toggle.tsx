@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { useTheme } from "next-themes";
-import { Switch } from "@radix-ui/themes";
+import { useTheme } from 'next-themes';
+import { Switch } from '@radix-ui/themes';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();

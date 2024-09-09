@@ -1,4 +1,4 @@
-import { AlertDialog, Button, Flex } from "@radix-ui/themes";
+import { AlertDialog, Button, Flex } from '@radix-ui/themes';
 
 export default function Alert() {
   return (

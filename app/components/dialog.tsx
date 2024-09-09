@@ -1,4 +1,4 @@
-import { Dialog, Button, Flex, Text, TextField } from "@radix-ui/themes";
+import { Dialog, Button, Flex, Text, TextField } from '@radix-ui/themes';
 
 export default function Modal() {
   return (

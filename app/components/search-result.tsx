@@ -1,4 +1,4 @@
-import { Card } from "@radix-ui/themes";
+import { Card } from '@radix-ui/themes';
 
 type Props = {
   result: object | null;

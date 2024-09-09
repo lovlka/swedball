@@ -1,18 +1,18 @@
-import type { Metadata, Viewport } from "next";
-import { type PropsWithChildren } from "react";
-import { ThemeProvider } from "next-themes";
+import type { Metadata, Viewport } from 'next';
+import { type PropsWithChildren } from 'react';
+import { ThemeProvider } from 'next-themes';
 import { Theme } from '@radix-ui/themes';
 
 import './styles/reset.css';
 import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
-  title: "Swedball",
-  description: "Swedish data mining project"
+  title: 'Swedball',
+  description: 'Swedish data mining project'
 };
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   userScalable: false
 };
 
