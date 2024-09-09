@@ -16,3 +16,7 @@ header {
 .radix-themes {
   background-image: radial-gradient(at top, var(--accent-1), var(--accent-3));
 }
+
+.capitalize {
+  text-transform: capitalize;
+}

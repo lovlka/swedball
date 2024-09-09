@@ -14,8 +14,8 @@ function getRequestInit(): RequestInit {
   return { headers };
 }
     
-export async function fetchUser(userId: number) {
-  const res = await fetch(`${ApiUrl}/users/${userId}`, getRequestInit());
+export async function searchCompanies(search: string) {
+  const res = await fetch(`${ApiUrl}/users/${search}`, getRequestInit());
   const data = await res.json();
   return data;
 }
