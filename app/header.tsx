@@ -1,8 +1,8 @@
 'use client';
 
 import { Container, Flex } from '@radix-ui/themes';
-import ThemeToggle from './components/theme-toggle';
 import { NavMenu } from './components/nav-menu';
+import { UserMenu } from './components/user-menu';
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
       <Container py="2" px="3">
         <Flex align="center" justify="between">
           <NavMenu />
-          <ThemeToggle />
+          <UserMenu />
         </Flex>
       </Container>
     </header>

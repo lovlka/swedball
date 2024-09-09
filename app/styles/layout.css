@@ -13,7 +13,7 @@ header {
   border-bottom: 1px solid var(--gray-a4);
 }
 
-.radix-themes {
+.radix-themes[data-has-background="true"] {
   background-image: radial-gradient(at top, var(--accent-1), var(--accent-3));
 }
 
