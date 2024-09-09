@@ -21,11 +21,18 @@ function checkResponse(response: Response) {
   throw new Error(response.statusText);
 }
 
-export async function searchCompanies(search: string) {
-  const query = new URLSearchParams({
-    q: encodeURIComponent(search),
-    query_by: 'registrationNumber'
+function getSearchQuery(search: string) {
+  const sanitized = search.replace(/[^\w\s-]/gi, '');
+  const isNumber = /^[0-9-]+$/.test(sanitized);
+
+  return new URLSearchParams({
+    q: encodeURIComponent(sanitized),
+    query_by: isNumber ? 'registrationNumber' : 'companyName'
   });
+}
+
+export async function searchCompanies(search: string) {
+  const query = getSearchQuery(search);
   const url = `${ApiUrl}/search/companies?${query.toString()}`;
   const response = await fetch(url, getRequestInit());
   checkResponse(response);

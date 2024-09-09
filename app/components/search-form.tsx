@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { ExclamationTriangleIcon, MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { Box, Flex, TextField } from '@radix-ui/themes';
 import { useAppDispatch } from '@/state/hooks';
 import { setResult } from '@/state/slices/search';
 import { searchCompanies } from '../actions/tic-api';
-import { ExclamationCircle, MagnifyingGlass } from './icons';
 import SubmitButton from './submit-button';
 import Callout from './callout';
 
@@ -32,7 +32,7 @@ export default function SearchForm() {
         <Box flexGrow="1">
           <TextField.Root name="search" placeholder="Org.nummer eller namn...">
             <TextField.Slot>
-              <MagnifyingGlass />
+              <MagnifyingGlassIcon />
             </TextField.Slot>
           </TextField.Root>
         </Box>
@@ -40,7 +40,7 @@ export default function SearchForm() {
       </Flex>
       {error && (
         <Box mt="4">
-          <Callout icon={<ExclamationCircle />} text={error} />
+          <Callout icon={<ExclamationTriangleIcon />} text={error} />
         </Box>
       )}
     </form>
