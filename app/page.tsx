@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Flex, Container, Section, Card, Box } from "@radix-ui/themes";
-import Form from "./components/search-form";
 import { fetchUser } from "./actions/dummy-api";
-import ResultTable from "./components/result";
+import SearchForm from "./components/search-form";
+import SearchResult from "./components/search-result";
 
 export default function Home() {
   const [result, setResult] = useState<object | null>(null);
@@ -25,8 +25,8 @@ export default function Home() {
                 <Flex justify="center">
                   <Image src="/logo.png" alt="Swedball" height={100} width={65} />
                 </Flex>
-                <Form onSubmit={handleSubmit} />
-                <ResultTable result={result} />
+                <SearchForm onSubmit={handleSubmit} />
+                <SearchResult result={result} />
               </Flex>
             </Card>
           </Box>

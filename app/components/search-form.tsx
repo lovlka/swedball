@@ -4,7 +4,11 @@ import { Box, Flex, TextField } from "@radix-ui/themes";
 import SubmitButton from "./submit-button";
 import { MagnifyingGlass } from "./icons";
 
-export default function SearchForm({ onSubmit }: { onSubmit: () => void }) {
+type Props = {
+  onSubmit: (data: FormData) => void;
+};
+
+export default function SearchForm({ onSubmit }: Props) {
   return (
     <form action={onSubmit}>
       <Flex gap="4">

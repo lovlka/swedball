@@ -1,7 +1,11 @@
 import { Card } from "@radix-ui/themes";
 
-export default function Result({ result }: { result: object | null }) {
-  return result && (
+type Props = {
+  result: object | null;
+};
+
+export default function SearchResult({ result }: Props) {
+  return (
     <Card>
       <pre>
         {JSON.stringify(result, null, 2)}

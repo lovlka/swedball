@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { type PropsWithChildren } from "react";
 import { ThemeProvider } from "next-themes";
 import { Theme } from '@radix-ui/themes';
 
@@ -15,11 +16,7 @@ export const viewport: Viewport = {
   userScalable: false
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html>
       <body>
