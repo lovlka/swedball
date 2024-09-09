@@ -2,7 +2,7 @@
 
 import { fetchGet, getCompanyUrl, getSearchQuery } from './api-utils';
 
-// The Intelligent Company API
+// The Intelligence Company API
 // Docs: https://docs.tic.io/api-core/
 
 export async function searchCompanies(search: string) {
