@@ -1,0 +1,15 @@
+.nav-menu a, .nav-menu a {
+  color: var(--gray-10);
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--gray-12);
+}
+
+.nav-menu a.active {
+  font-weight: 500;
+  color: var(--gray-12);
+}
