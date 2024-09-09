@@ -6,8 +6,8 @@ import StoreProvider from '@/state/store-provider';
 import Header from './header';
 import Footer from './footer';
 
-import './styles/layout.css';
 import '@radix-ui/themes/styles.css';
+import './styles/layout.css';
 
 export const metadata: Metadata = {
   title: 'Swedball',

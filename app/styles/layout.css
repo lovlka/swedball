@@ -3,15 +3,16 @@ html, body {
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 pre {
   margin: 0;
   font-size: small;
 }
 
 header {
+  background: var(--color-panel);
   border-bottom: 1px solid var(--gray-a4);
+}
+
+.radix-themes {
+  background-image: radial-gradient(at top, var(--accent-3), var(--accent-1));
 }
