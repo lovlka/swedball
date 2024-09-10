@@ -27,7 +27,6 @@ export function NavMenu() {
       <Image src="/logo.png" alt="Swedball" height={30} width={20} />
       <NavItem href="/">Sök företag</NavItem>
       <NavItem href="/about">Om tjänsten</NavItem>
-      <NavItem href="mailto:victor@stodell.se">Support</NavItem>
     </Flex>
   );
 };

@@ -30,7 +30,7 @@ export default function SearchForm() {
     <form action={handleSubmit}>
       <Flex gap="4">
         <Box flexGrow="1">
-          <TextField.Root name="search" placeholder="Org.nummer eller namn...">
+          <TextField.Root name="search" placeholder="Namn eller org.nummer">
             <TextField.Slot>
               <MagnifyingGlassIcon />
             </TextField.Slot>
