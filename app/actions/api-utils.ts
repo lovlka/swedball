@@ -26,7 +26,7 @@ export async function fetchGet(endpoint: string) {
   return await response.json();
 }
 
-export function getSearchQuery(search: string) {
+export function getCompanySearchQuery(search: string) {
   const sanitized = search.replace(/[^\w\s-]/gi, '');
   const isNumber = /^[0-9-]+$/.test(sanitized);
 
@@ -36,6 +36,18 @@ export function getSearchQuery(search: string) {
   });
 }
 
-export function getCompanyUrl(companyId: number): string {
+export function getPersonSearchQuery(search: string) {
+  const sanitized = search.replace(/[^\w\s-]/gi, '');
+
+  return new URLSearchParams({
+    query: encodeURIComponent(sanitized)
+  });
+}
+
+export function getCompanyUrl(companyId?: number): string {
   return `/dataset/companies/${companyId}`;
+}
+
+export function getPersonUrl(personId: number): string {
+  return `/dataset/persons/${personId}`;
 }
