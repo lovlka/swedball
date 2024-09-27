@@ -12,17 +12,18 @@ function getRequestInit(): RequestInit {
   return { headers };
 }
 
-function checkResponse(response: Response) {
+async function checkResponse(response: Response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
-  throw new Error(response.statusText);
+  const body = await response.json();
+  throw new Error(`${response.statusText}: ${JSON.stringify(body)}`);
 }
 
 export async function fetchGet(endpoint: string) {
   const url = `${ApiUrl}${endpoint}`;
   const response = await fetch(url, getRequestInit());
-  checkResponse(response);
+  await checkResponse(response);
   return await response.json();
 }
 
@@ -32,7 +33,7 @@ export function getCompanySearchQuery(search: string) {
 
   return new URLSearchParams({
     q: encodeURIComponent(sanitized),
-    query_by: isNumber ? 'registrationNumber' : 'companyName'
+    query_by: isNumber ? 'registrationNumber' : 'names.nameOrIdentifier'
   });
 }
 

@@ -5,7 +5,7 @@ import { ExclamationTriangleIcon, MagnifyingGlassIcon } from '@radix-ui/react-ic
 import { Box, Flex, TextField } from '@radix-ui/themes';
 import { useAppDispatch } from '@/state/hooks';
 import { setResult } from '@/state/slices/search';
-import { searchCompanies } from '../actions/dummy-api';
+import { searchCompanies } from '../actions/tic-api';
 import SubmitButton from './submit-button';
 import Callout from './callout';
 

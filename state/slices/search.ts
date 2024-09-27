@@ -1,8 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
+export type SearchResult = {
+  hits: Array<object>
+}
+
 export interface SearchState {
-  result: object | null;
+  result: SearchResult | null;
 }
 
 const initialState: SearchState = {
@@ -13,7 +17,7 @@ export const searchSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
-    setResult: (state, action: PayloadAction<object>) => {
+    setResult: (state, action: PayloadAction<SearchResult>) => {
       state.result = action.payload;
     }
   }

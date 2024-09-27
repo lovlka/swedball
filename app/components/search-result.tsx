@@ -6,10 +6,12 @@ export default function SearchResult() {
 
   return result && (
     <Card>
-      <DataList.Root>
-        {Object.keys(result).map((key) => {
-          const value = result[key as keyof typeof result];
-          return (
+      <pre>
+        {JSON.stringify(result, null, 2)}
+      </pre>
+      {/*result.hits.map(hit => (
+        <DataList.Root>
+          {Object.entries(hit).map(([key, value]) => (
             <DataList.Item key={key}>
               <DataList.Label minWidth="80px" className="capitalize">
                 {key}
@@ -18,9 +20,9 @@ export default function SearchResult() {
                 {typeof value === 'object' ? Object.values(value).join(', ') : value}
               </DataList.Value>
             </DataList.Item>
-          );
-        })}
-      </DataList.Root>  
+          ))}
+        </DataList.Root>
+      ))*/}
     </Card>
   );
 }
